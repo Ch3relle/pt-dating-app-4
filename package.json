@@ -1,0 +1,27 @@
+{
+  "name": "project-tech",
+  "version": "1.0.0",
+  "description": "this is a project for blok-tech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js",
+    "presay-hello": "echo 'I run before say-hello'",
+    "say-hello": "echo 'Hello World'",
+    "postsay-hello": "echo 'I run after say-hello'"
+  },
+  "author": "Ch3relle",
+  "license": "MIT",
+  "dependencies": {
+    "camelcase": "^5.3.1",
+    "core-js": "^3.6.4",
+    "ejs": "^3.0.1",
+    "longest-streak": "^2.0.4",
+    "repeat-string": "^1.6.1",
+    "server": "^1.0.22",
+    "skin-tone": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
