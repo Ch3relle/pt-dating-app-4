@@ -1,3 +1,3 @@
-# Project name
+# Project TECH
 
 ## Description
