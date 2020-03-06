@@ -1,4 +1,3 @@
 # Project TECH
-hoi
 
 ## Description
