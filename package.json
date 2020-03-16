@@ -13,11 +13,14 @@
   "author": "Ch3relle",
   "license": "MIT",
   "dependencies": {
+    "acorn": "^7.1.1",
     "camelcase": "^5.3.1",
     "core-js": "^3.6.4",
+    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "longest-streak": "^2.0.4",
+    "mongod": "^2.0.0",
     "repeat-string": "^1.6.1",
     "server": "^1.0.22",
     "skin-tone": "^2.0.0"

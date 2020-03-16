@@ -5,23 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Stap 1</title>
 </head>
 
 <body>
   <header>
-
+<h1>Stap 1: Wie ben jij?</h1>
   </header>
+
   <main>
     <form class="" action="index.html" method="post">
-      <fieldset>
-        <legend>hoi</legend>
-        Naam <input type="text" name="name" value="">
-        Leeftijd <input type="text" name="" value="">
-        <label for="vrouw">Vrouw</label>
-        <input type="radio" name="" value="">
 
-      </fieldset>
+      <div>
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="user_name">
+      </div>
+
+      <div>
+        <label for="age">Leeftijd:</label>
+        <input type="number" id="age" name="user_age">
+      </div>
+
+      <div>
+        <label for="gender">Geslacht:</label>
+        <input type="radio" name="user_gender" value="male">
+        <label for="male">Man</label>
+        <input type="radio" name="user_gender" value="female">
+        <label for="female">Vrouw</label>
+        <input type="radio" name="user_gender" value="other">
+        <label for="other">Anders</label>
+      </div>
+
+      <div>
+        <label for="location">Plaatsnaam:</label>
+        <input type="text" id="location" name="user_location">
+      </div>
+
+      <div class="button">
+        <button type="submit">Volgende</button>
+      </div>
+
     </form>
 
   </main>

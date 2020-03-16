@@ -1,6 +1,7 @@
 
 // requiring express
 const express = require('express');
+
 const app = express();
 
 
@@ -26,6 +27,11 @@ app.get('/pages/contact.html', (req, res) => {
 app.get('/images/cat.jpg', (req, res) => {
   res.send('images/cat.jpg');
 });
+
+app.get('/*mp3', (req, res) => {
+  res.send('/audio/AmIWrong.mp3');
+});
+
 
 // 404 page, user will be sent to a html-page
 app.get('/pages/404.html', (req, res) => {
