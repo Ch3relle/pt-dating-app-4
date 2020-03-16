@@ -2,10 +2,10 @@
   "name": "project-tech",
   "version": "1.0.0",
   "description": "this is a project for blok-tech",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "nodemon index.js",
+    "start": "node server.js",
+    "test": "nodemon server.js",
     "presay-hello": "echo 'I run before say-hello'",
     "say-hello": "echo 'Hello World'",
     "postsay-hello": "echo 'I run after say-hello'"
