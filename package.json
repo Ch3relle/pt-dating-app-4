@@ -20,6 +20,7 @@
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "longest-streak": "^2.0.4",
+    "minimist": "^1.2.5",
     "mongod": "^2.0.0",
     "repeat-string": "^1.6.1",
     "server": "^1.0.22",
