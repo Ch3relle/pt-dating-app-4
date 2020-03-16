@@ -1,12 +1,17 @@
-
 // requiring express
 const express = require('express');
 
 const app = express();
 
-
-
+app.set('view engine', 'ejs'); // here I set the engine I'm using to create templates
 app.use(express.static('static'));
+
+// app.set('views', 'view');
+
+// styling
+// app.get('/', (req, res) => {
+//   res.sendFile(__dirname + '/css/style.css')
+// });
 
 
 // '=>' means function
@@ -30,6 +35,14 @@ app.get('/images/cat.jpg', (req, res) => {
 
 app.get('/*mp3', (req, res) => {
   res.send('/audio/AmIWrong.mp3');
+});
+
+
+app.get('/form1', (req, res) => {
+  const username = req.params.form
+  res.render('form1', {
+    username: username
+  })
 });
 
 
