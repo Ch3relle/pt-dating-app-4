@@ -26,5 +26,3 @@ Voor Project TECH werk ik aan een dating app. Voor het individuele deel van het 
 ### License
 
 ### Acknowledgments
-
-test
