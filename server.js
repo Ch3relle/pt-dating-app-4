@@ -1,53 +1,48 @@
 // requiring express
 const express = require('express');
-
 const app = express();
 
 app.set('view engine', 'ejs'); // here I set the engine I'm using to create templates
-app.use(express.static('static'));
+app.use(express.static('public'));
+
 
 // app.set('views', 'view');
 
-// styling
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/css/style.css')
-// });
 
-
-// '=>' means function
-app.get('/', (req, res) => {
+// '=>' means arrow function
+app.get('/', (req, res, next) => {
   res.send('Hello World') // can be found inside of the browser
 });
 
 // about page
-app.get('/pages/about.html', (req, res) => {
+app.get('/pages/about.html', (req, res, next) => {
   res.send('/pages/about.html');
 });
 
 // contact page
-app.get('/pages/contact.html', (req, res) => {
+app.get('/pages/contact.html', (req, res, next) => {
   res.send('/pages/contact.html');
 });
 
-app.get('/images/cat.jpg', (req, res) => {
+app.get('/images/cat.jpg', (req, res, next) => {
   res.send('images/cat.jpg');
 });
 
-app.get('/*mp3', (req, res) => {
+app.get('/*mp3', (req, res, next) => {
   res.send('/audio/AmIWrong.mp3');
 });
 
 
-app.get('/form1', (req, res) => {
-  const username = req.params.form
+app.get('/form1', (req, res, next) => {
   res.render('form1', {
-    username: username
+    // const username = req.params.form
+    // username: username
   })
 });
 
 
 // 404 page, user will be sent to a html-page
-app.get('/pages/404.html', (req, res) => {
+app.get('*', (req, res, next) => {
   res.send('pages/404.html');
 });
 
