@@ -3,10 +3,8 @@ const express = require('express');
 const app = express();
 
 app.set('view engine', 'ejs'); // here I set the engine I'm using to create templates
+app.set('views', '/views');
 app.use(express.static('public'));
-
-
-// app.set('views', 'view');
 
 
 // '=>' means arrow function
@@ -33,17 +31,14 @@ app.get('/*mp3', (req, res, next) => {
 });
 
 
-app.get('/form1', (req, res, next) => {
-  res.render('form1', {
-    // const username = req.params.form
-    // username: username
-  })
+app.get('/signin', (req, res) => {
+  res.render('signin');
 });
 
 
-// 404 page, user will be sent to a html-page
+// 404 page, user will be sent to a ejs-page
 app.get('*', (req, res, next) => {
-  res.send('pages/404.html');
+  res.render('404');
 });
 
 

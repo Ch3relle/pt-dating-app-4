@@ -1,14 +1,75 @@
+/* html {
+  display: flex;
+  justify-content: center;
+} */
+
 body {
-  background-color: pink;
-  font-family: monospace;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-form {
-  font-size: 1.5em;
+/* responsiveness of the application */
+@media (min-width:22.5em) {
+
 }
 
+@media (min-width:36em) {
+
+}
+
+@media (min-width:55em) {
+
+}
+
+/* body of the sign in page */
+.signin {
+  background-color: #F8F7F8;
+  color: #141414;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+/* ******* */
+/* SIGN IN */
+/* ******* */
+/* email */
+.email {
+  display: flex;
+  flex-direction: column;
+}
+
+/* password */
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+/* label email & password */
+.email>label, .password>label {
+  margin-bottom: .25em;
+}
+
+/* input email & password */
+.email>input, .password>input {
+  font-size: 1em;
+
+  border-radius: .2em;
+  margin-bottom: 1em;
+  width: 20em;
+  height: 2em;
+}
+
+/* button */
 button {
   padding: 1em;
-  margin: 1em 0;
+  /* margin: 1em 0; */
   border-radius: .25em;
 }
+
+
+
+/* ******* */
+/* SIGN UP */
+/* ******* */
