@@ -19,14 +19,18 @@
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
+    "eslint": "^6.8.0",
     "express": "^4.17.1",
     "longest-streak": "^2.0.4",
     "minimist": "^1.2.5",
     "mongod": "^2.0.0",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
     "repeat-string": "^1.6.1",
     "request": "^2.88.2",
     "server": "^1.0.22",
-    "skin-tone": "^2.0.0"
+    "skin-tone": "^2.0.0",
+    "slug": "^2.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

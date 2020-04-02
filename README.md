@@ -1,8 +1,8 @@
 
-### Getting Started
+## Blok TECH: Dating app
 
-
-#### Prerequisites
+#### Korte uitleg
+Gedurende 
 
 #### Installing
 
@@ -22,5 +22,3 @@
 * Cherelle - Feature: Registration - Ch3relle
 
 ### License
-
-### Acknowledgments
