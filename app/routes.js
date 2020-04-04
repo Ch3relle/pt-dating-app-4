@@ -7,6 +7,8 @@ const path = require('path');
 // router object
 const router = express.Router();
 
+router.use(express.json());
+
 // export router
 module.exports = router;
 
@@ -20,9 +22,6 @@ router.get('/signin', (req, res) => {
   res.render('./pages/signin');
 });
 
-router.post('/signin', (req, res) => {
-  console.log(req.body.message);
-});
 
 // getting signup page
 router.get('/signup', (req, res) => {
@@ -34,42 +33,3 @@ router.get('/signup', (req, res) => {
 router.get('*', (req, res) => {
   res.render('./pages/404');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // about page
-// app.get('/pages/about.html', (req, res, next) => {
-//   res.send('/pages/about.html');
-// });
-//
-// // contact page
-// app.get('/pages/contact.html', (req, res, next) => {
-//   res.send('/pages/contact.html');
-// });
-//
-// app.get('/images/cat.jpg', (req, res) => {
-//   res.send('images/cat.jpg');
-// });
-//
-// app.get('/*mp3', (req, res) => {
-//   res.send('/audio/AmIWrong.mp3');
-// });
-
-
-
-// var data = [
-//   id: '',
-//   name: '',
-//   email: '',
-//   password: ''
-// ];

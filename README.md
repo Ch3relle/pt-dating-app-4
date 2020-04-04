@@ -1,24 +1,18 @@
 
 ## Blok TECH: Dating app
 
-#### Korte uitleg
-Gedurende 
+#### Korte uitleg project
+Voor Blok TECH ben ik aan de slag geweest met een feature voor een dating app. De feature waar ik de afgelopen tijd aan heb zitten werken is registreren.
 
-#### Installing
+#### Hoe installeer je mijn project?
 
-### Running the tests
-
-#### Break down into end to end tests
-
-### Deployment
+### Look van mijn project
 
 ### Built With
-
-### Contributing
-
-### Versioning
 
 ### Authors
 * Cherelle - Feature: Registration - Ch3relle
 
 ### License
+
+### Bronnen

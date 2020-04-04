@@ -8,6 +8,7 @@ const app = express();
 
 // setting the engine I'm using to create templates
 app.set('view engine', 'ejs');
+app.set('views', 'views');
 app.use(express.static('public'));
 
 // using bodyParser
@@ -16,5 +17,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 const router = require('./app/routes');
 app.use('/', router);
 
-
-app.listen(3000, () => console.log('Listening on port 3000...'));
+// PORT
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
