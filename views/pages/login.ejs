@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Love Lingo</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/love_lingo_logo.svg" alt="">
+    <h1>SIGN IN</h1>
+  </header>
+
+  <main>
+
+    <form action="/sendLoginForm" method="POST">
+
+      <div class="email">
+        <label for="">E-MAILADRES</label>
+        <input type="email" name="email">
+      </div>
+
+      <div class="password">
+        <label for="">PASSWORD</label>
+        <input type="password" name="password">
+      </div>
+
+      <div class="loginButton">
+        <button type="button" name="signin_button">LOGIN</button>
+      </div>
+    </form>
+
+    <div class="loginMessage">Not a member yet? <a href="http://localhost:3000/signup">Sign up</a>
+    </div>
+
+  </main>
+
+  <footer></footer>
+</body>
+
+</html>

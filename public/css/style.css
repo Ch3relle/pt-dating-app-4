@@ -9,10 +9,16 @@ html {
 }
 
 body {
-  box-sizing: border-box;
-  /* display: flex;
+  /* box-sizing: border-box;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   flex-direction: column; */
+
+  background-color: #F8F7F8;
+  color: #141414;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
 }
 
 /* h1 business */
@@ -36,12 +42,12 @@ h1 {
 }
 
 /* body of the sign in page */
-.signin, .signup {
+/* .login, .signup {
   background-color: #F8F7F8;
   color: #141414;
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
-}
+} */
 
 /* ******* */
 /* SIGN IN */
@@ -94,7 +100,7 @@ a {
 }
 
 /* message for signing in & signing up*/
-.signinMessage, .signupMessage {
+.loginMessage, .signupMessage {
   margin: 3em 0;
 }
 
