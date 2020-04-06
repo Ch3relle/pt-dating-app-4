@@ -22,15 +22,15 @@ console.log(req.method + ' ' + req.path + ' - ' + req.ip);
 // mongo connection
 require('dotenv').config();
 
-let db = null;
+let db = null ;
 const url = 'mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT;
 
-mongo.MongoClient.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, (err, client) => {
-  if (err) {
-    throw err;
-  }
-  db = client.db(process.env.DB_NAME);
-})
+  mongo.MongoClient.connect(url, { useUnifiedTopology: true }, function (err, client) { 
+  if (err) { 
+    throw err ;
+  } 
+console.log("database running") ;
+db = client.db(process.env.DB_NAME) })
 
 
 /*****************/
@@ -44,7 +44,8 @@ router.get('/', (req, res) => {
 
 // signup page
 router.get('/signup', (req, res) => {
-  res.render('./pages/signup');
+  res.render('./pages/signup', { data: data });
+  console.log(data);
 });
 
 // age page
@@ -66,6 +67,15 @@ router.get('/location/:id', (req, res) => {
 /****** POST *****/
 /*****************/
 
+router.post('/signup', (req, res) => {
+  db.collection('users').insertOne({  
+   name: req.body.name
+ }) ;
+  res.redirect('back');
+});
+
+
+let data =
 
 // router.post('/sendGenderForm', genderAdded);
 //
