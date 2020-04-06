@@ -4,7 +4,6 @@ const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const slug = require('slug');
 
-
 const app = express();
 
 // setting the engine I'm using to create templates
@@ -17,6 +16,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 const router = require('./app/routes');
 app.use('/', router);
+
+
 
 // PORT
 const port = process.env.PORT || 3000;

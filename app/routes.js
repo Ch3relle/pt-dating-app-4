@@ -1,14 +1,10 @@
-// require express
+// require packages
 const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
-const mongodb = require('mongodb');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
+const mongo = require('mongodb');
 
-require('dotenv').config();
-
-// connect to db & fix deprecation warnings (from a tutorial)
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 
 // router object
 const router = express.Router();
@@ -22,6 +18,20 @@ router.use('/json', (req, res, next) => {
 console.log(req.method + ' ' + req.path + ' - ' + req.ip);
   next();
 });
+
+// mongo connection
+require('dotenv').config();
+
+let db = null;
+const url = 'mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT;
+
+mongo.MongoClient.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, (err, client) => {
+  if (err) {
+    throw err;
+  }
+  db = client.db(process.env.DB_NAME);
+})
+
 
 /*****************/
 /****** GET ******/
@@ -53,8 +63,14 @@ router.get('/location/:id', (req, res) => {
 });
 
 /*****************/
-/****** POST ******/
+/****** POST *****/
 /*****************/
+
+
+// router.post('/sendGenderForm', genderAdded);
+//
+// genderAdded(req, res) =>
+
 
 
 

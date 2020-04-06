@@ -19,12 +19,13 @@
 
       <form action="/sendLocationForm" method="post">
 
-
         <legend>I live in:</legend>
 
         <div>
           <label for="location">Name location:</label>
-          <input type="text" id="location" name="user_location">
+          <input type="text" name="location">
+
+          <input type="hidden" name="id" value="<%= id %>" />
         </div>
 
         <div class="button">
