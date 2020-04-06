@@ -106,3 +106,4 @@ dist
 .env
 node.modules/
 db
+.DS_Store
