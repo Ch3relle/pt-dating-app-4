@@ -57,6 +57,7 @@ form {
   font-size: .9em;
 }
 
+/* div in form */
 /* name, email & password */
 .name, .email, .password {
   display: flex;
@@ -70,7 +71,8 @@ form {
 }
 
 /* input email & password */
-.name>input, .email>input, .password>input {
+/* .name>input, .email>input, .password>input */
+input {
   font-size: .9em;
   background-color: #F8F7F8;
   border: 1px solid black;
@@ -79,6 +81,12 @@ form {
   width: 15em;
   height: 2em;
 }
+
+form input:focus {
+  background-color: #d8ecf3;
+  box-shadow: 10px 10px 5px -6px gainsboro;
+}
+
 
 /* button */
 button {

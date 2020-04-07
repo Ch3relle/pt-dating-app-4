@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const mongo = require('mongodb');
 
 
@@ -22,15 +22,17 @@ console.log(req.method + ' ' + req.path + ' - ' + req.ip);
 // mongo connection
 require('dotenv').config();
 
-let db = null ;
-const url = 'mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT;
 
-  mongo.MongoClient.connect(url, { useUnifiedTopology: true }, function (err, client) { 
+
+let db = null ;
+const url = process.env.MONGO_URI;
+
+  mongo.MongoClient.connect(url, {useUnifiedTopology: true}, (err, client) => { 
   if (err) { 
     throw err ;
   } 
-console.log("database running") ;
-db = client.db(process.env.DB_NAME) })
+console.log('database running') ;
+db = client.db(process.env.DB_NAME) });
 
 
 /*****************/
@@ -39,13 +41,12 @@ db = client.db(process.env.DB_NAME) })
 
 // login page
 router.get('/', (req, res) => {
-  res.render('./pages/login');
+  res.render('./login');
 });
 
 // signup page
 router.get('/signup', (req, res) => {
-  res.render('./pages/signup', { data: data });
-  console.log(data);
+  res.render('./signup');
 });
 
 // age page
@@ -67,24 +68,21 @@ router.get('/location/:id', (req, res) => {
 /****** POST *****/
 /*****************/
 
-router.post('/signup', (req, res) => {
-  db.collection('users').insertOne({  
-   name: req.body.name
- }) ;
+// receiving name from signup form
+router.post('/sendSignupForm', (req, res) => {
+   db.collection('users').insertOne(
+     {
+       user: req.body.user,
+       email: req.body.email,
+       password: req.body.password
+     });
   res.redirect('back');
+  console.log('user: ' + req.body.users + ', ' + 'email: ' + req.body.email + ', ' + 'password: ' + req.body.password);
 });
-
-
-let data =
-
-// router.post('/sendGenderForm', genderAdded);
-//
-// genderAdded(req, res) =>
-
 
 
 
 // when a user requests a page that doesn't exits than they will be sent to a '404'-page
 router.get('*', (req, res) => {
-  res.render('./pages/404');
+  res.render('./404');
 });

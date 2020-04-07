@@ -2,11 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Love Lingo</title>
+<%- include('partials/head.ejs'); -%>
 </head>
 
 <body>
@@ -17,11 +13,11 @@
 
   <main>
 
-    <form class="signupForm" action="/signup" method="POST">
+    <form class="signupForm" action="/sendSignupForm" method="POST">
 
       <div class="name">
         <label for="">NAME</label>
-        <input type="text" name="name">
+        <input type="text" name="user">
       </div>
 
       <div class="email">
