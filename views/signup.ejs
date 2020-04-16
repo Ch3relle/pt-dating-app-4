@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<%- include('partials/head.ejs'); -%>
+<%- include('./partials/head.ejs'); -%>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 
       <div class="name">
         <label for="">NAME</label>
-        <input type="text" name="user">
+        <input type="text" name="users">
       </div>
 
       <div class="email">
@@ -30,10 +30,19 @@
         <input type="password" name="password">
       </div>
 
+      <div class="confirmPassword">
+        <label for="">CONFIRM PASSWORD</label>
+        <input type="password" name="confirmPassword">
+      </div>
+
+
+
       <div class="signupButton">
         <button type="submit" name="signin_button">SUBMIT</button>
       </div>
+
     </form>
+
 
     <div class="signupMessage">Already a member? <a href="http://localhost:3000/">Login</a>
     </div>

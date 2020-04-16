@@ -16,13 +16,17 @@ Voor Blok TECH ben ik aan de slag geweest met een feature voor een dating app. D
 * Mongoose
 
 #### Authors
-* Cherelle - [Feature: Registration](https://github.com/Ch3relle/pt-dating-app-2) - [Ch3relle](https://github.com/Ch3relle)
+* Cherelle - [Feature: Registration](https://github.com/Ch3relle/pt-dating-app-4) - [Ch3relle](https://github.com/Ch3relle)
 
 #### License
 MIT
 
 ### Bronnen
+Adam Pritchard, Markdown Cheatsheet · adam-p/markdown-here Wiki, Github - Geraadpleegd op 19 maart, van [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
 Kody Simpson, Node.js & Express Web Development Playlist, Youtube - Geraadpleegd op 16 maart 2020, van [https://www.youtube.com/watch?v=P-49OhH1Y1o&list=PLfu_Bpi_zcDNkVYRTtlYXP2HdGVoq8zXB](https://www.youtube.com/watch?v=P-49OhH1Y1o&list=PLfu_Bpi_zcDNkVYRTtlYXP2HdGVoq8zXB)
+
+Chris on Code & Holly Lloyd, Build Your First Node.js Website Courses, Scotch.io - Geraadpleegd op 30 maart 2020, van [https://scotch.io/courses/build-your-first-nodejs-website/course-introduction](https://scotch.io/courses/build-your-first-nodejs-website/course-introduction)
 
 Learn | freeCodeCamp.org (z.d.) - Geraadpleegd op 2 april 2020, van [https://www.freecodecamp.org/learn/](https://www.freecodecamp.org/learn/)
 

@@ -59,14 +59,14 @@ form {
 
 /* div in form */
 /* name, email & password */
-.name, .email, .password {
+.name, .email, .password, .confirmPassword {
   display: flex;
   flex-direction: column;
 }
 
 /* password */
 /* label email & password */
-.name>label, .email>label, .password>label {
+.name>label, .email>label, .password>label, .confirmPassword>label {
   margin-bottom: .25em;
 }
 
